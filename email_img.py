@@ -25,60 +25,17 @@ def email_pic(pic_num):
 	EMAIL_PASSWORD = 'pythonemail'
 	now = datetime.now()    
 	datetime_subject_line = now.strftime("%m/%d/%Y @ %H:%M")
-	"""
-	print(path)
-	with open(path, 'rb') as f:
-		#img_data = f.read()
-		part = MIMEApplication(f.read(), Name=str(pic_num))
-		
-	
-	msg = MIMEMultipart()
-	msg['Subject'] = 'Ding-Dong! - ' + str(datetime_subject_line)
-	#subject = 'Splash Device +------------------------------------------- Notification - ' + str(datetime_subject_line)
-	msg['From'] = EMAIL_ADDRESS 
-	# from_txt = EMAIL_ADDRESS
-	msg['To'] = ['whitfd18@wfu.edu', 'coverletterwriter@gmail.com', 'aspiers10@gmail.com']
-	to_txt = ['whitfd18@wfu.edu', 'coverletterwriter@gmail.com', 'aspiers10@gmail.com']
-	# to_txt = ['whitfd18@wfu.edu', 'coverletterwriter@gmail.com', 'aspiers10@gmail.com', 'paucavp@wfu.edu']
-	body_txt = """ """
-Ding-Dong!
-Look at this fool at yo door.
-Image is attached.
-
-Have a great day, bozo.
-  -Frank and Andie
-  
-  
-          
-Sent on """ """+ str(datetime_subject_line)
-	# email_txt = body_txt
-	text = MIMEText(body_txt)
-	msg.attach(text)
-	
-	attachment = open(path, 'rb')
-	part = MIMEBase("application", "octet-stream")
-	part.set_payload(attachment.read())
-	encoders.encode_base64(part)
-	part.add_header("Content-Disposition", 
-	"attachment; filename=%s" % str(pic_num))
-	#msg.attach(part)
-	
-	# image = MIMEImage(img_data, name=(str(pic_num) + ".jpg"))
-	# msg.attach(image)
-	# part['Content-Disposition'] = 'attachment; filename="%s"' % str(pic_num)
-	# msg.attach(part)
-	# msg = msg.as_string()
-	"""
 	msg = EmailMessage()
 	msg['Subject'] = 'Ding-Dong! - ' + str(datetime_subject_line)
 	msg['From'] = EMAIL_ADDRESS 
 	msg['To'] = ['whitfd18@wfu.edu', 'coverletterwriter@gmail.com', 'aspiers10@gmail.com']
-	msg.set_content("""
-Ding-Dong!
-Look at this fool at yo door.
+	msg.set_content("""Ding-Dong!
+
+You just took a photo using Ding-Dong!
+
 Image is attached.
 
-Have a great day, bozo.
+Have a great day!
   -Frank and Andie
   
   
