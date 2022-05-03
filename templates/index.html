@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>Surveillance System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+  </head>
+  <body>
+    
+    <h1>Surveillance System</h1>
+    <img src="{{ url_for('video_feed') }}">
+    
+    <form id="package_form" action="" method="POST">
+      
+      <div class="panel-body">
+        <input type ="submit" name="action" value="Take Picture">
+      </div>
+      
+      <div class="panel-body">
+        <input type ="submit" name="action" value="Unlock Door">
+      </div>
+      
+      <div class="panel-body">
+        <input type ="submit" name="action" value="Call 911">
+      </div>
+      
+    </form>
+    
+  </body>
+  
+</html>

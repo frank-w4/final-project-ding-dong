@@ -1,0 +1,18 @@
+body {
+  margin: 0;
+  margin-left: 20px;
+  padding: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #D33E43;
+  background: #1C1F33;
+}
+
+input[type=submit] {
+  padding: 5px 15px;
+  background: #D33E43;
+  border: 0 none;
+  cursor: pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
